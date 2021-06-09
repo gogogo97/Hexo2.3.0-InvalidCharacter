@@ -1,0 +1,17 @@
+{
+  "name": "hexo",
+  "description": "",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "themes/default/assets/vendor"
+  ],
+  "dependencies": {},
+  "overrides": {},
+  "main": "",
+  "license": "MIT"
+}

@@ -1,0 +1,8 @@
+$black:                  #000000;
+$white:                  #FFFFFF;
+
+$colors: ();
+$colors: map-merge((
+  "black":               $black,
+  "white":               $white
+), $colors);

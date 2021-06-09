@@ -1,0 +1,51 @@
+@mixin font-family($key, $lang) {
+    $values: map-deep-get($font-family, $lang, $key);
+    @include typography-generator("font-family", $values);
+}
+
+@mixin font-size($key, $lang) {
+    $values: map-deep-get($font-size, $lang, $key);
+    
+    @include typography-generator("font-size", $values);
+}
+
+@mixin font-weight($key, $lang) {
+    $values: map-deep-get($font-weight, $lang, $key);
+    @include typography-generator("font-weight", $values);
+}
+
+@mixin typography-generator($property, $values) {
+    @if (type-of($values) == map) { // is map value e.g. breakpoint value
+        @include typography-property-with-breakpoint($property, $values)
+    } 
+    @else {
+        @include typography-property($property, $values)
+    }
+}
+
+@mixin typography-property-with-breakpoint($property, $values) {
+    @each $breakpoint, $value in $values {
+        @if ($breakpoint == 'default') {
+            @include typography-property($property, $value)
+        }  
+        @else { 
+            @include media-breakpoint-down($breakpoint) {
+                @include typography-property($property, $value)
+            }
+        }
+    }
+}
+
+@mixin typography-property($property, $values) {
+    @if ($property == 'font-size') {
+        #{$property}: px-to-rem($values);
+    } 
+    @else {
+        #{$property}: $values;
+    }
+}
+
+
+@function px-to-rem($value, $base: 16) {
+    @return ($value / $base) * 1rem;
+}

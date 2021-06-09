@@ -1,0 +1,16 @@
+.modal {
+    $parent: &;
+
+    &--search {
+        #{$parent} {
+
+            &-content {
+                border-radius: .5rem;
+            }
+
+            &-body {
+                padding: 1rem;
+            }
+        }
+    }
+}

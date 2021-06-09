@@ -1,0 +1,52 @@
+$languages: ('en', 'th');
+
+$font-family: (
+    en: (
+        body: ('Roboto', sans-serif)
+    ),
+    th: (
+        body: ('Roboto', 'Tahoma', sans-serif)
+    )
+);
+
+$font-size: (
+    en: (
+        h1: 40,
+        h2: 32,
+        h3: 28,
+        h4: 24,
+        h5: 20,
+        h6: 16,
+        display-1: 96,
+        display-2: 88,
+        display-3: 72,
+        display-4: 56,
+        body: 16,
+        lead: 18
+    ),
+    th: (
+        h1: 40,
+        h2: 32,
+        h3: 28,
+        h4: 24,
+        h5: 20,
+        h6: 16,
+        display-1: 96,
+        display-2: 88,
+        display-3: 72,
+        display-4: 56,
+        body: 16,
+        lead: 18
+    )
+);
+
+$font-weight: (
+    en: (
+        heading: 700,
+        body: 400
+    ),
+    th: (
+        heading: 700,
+        body: 400
+    )
+);

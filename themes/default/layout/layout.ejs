@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="/assets/static/images/favicon.ico" type="image/png">
+
+
+    <title>
+        <%- config.title %>
+    </title>
+
+
+    <%- css('/assets/vendor.css') %>
+    <%- css('/assets/theme.css') %>
+    <%- css('/assets/cookie.css') %>
+
+
+</head>
+
+
+<body>
+
+<%- partial('_partial/header') %>
+
+<main class="main content">
+    <%- body %>
+</main>
+
+
+<%- partial('_partial/footer') %>
+
+
+<%- partial('_partial/cookie-consent-bar') %>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.js" integrity="sha256-ufGElb3TnOtzl5E4c/qQnZFGP+FYEZj5kbSEdJNrw0A=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/vue-cookies@1.7.0/vue-cookies.js" integrity="sha384-7dyx+Oq2yUdkYNiOWIuasOrgSbsm4yDHY84Or4BTreZitacvjz9n7q/yLMTXadXI" crossorigin="anonymous"></script>
+
+<%- js('/assets/vendor.js') %>
+<%- js('/assets/theme.js') %>
+<%- js('/assets/cookie.js') %>
+
+
+<script id="__bs_script__">
+    //inject browsersync client if local
+    if (location.hostname.search('.(dev|dev.template)') > -1) {
+        //<![CDATA[
+        document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.18.8'><\/script>".replace("HOST", location.hostname));
+        //]]>
+    }
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+# Site
+title: Hexo
+author: Shareinvestor Thailand
+
+
+
+# Directory
+source_dir: themes/default/views
+public_dir: public
+
+
+# Extensions
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+theme: default
+
+# Exclusion
+exclude:
+  - themes/default/assets/**/*

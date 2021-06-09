@@ -1,0 +1,28 @@
+.autocomplete {
+    
+    &:hover, &:focus {
+        outline: none;
+        box-shadow: none;    
+    }
+
+    &-suggestions {
+        overflow-y: auto;
+    }
+
+    &-suggestion {
+        background-color: #FFF;
+        padding: .25rem 1rem;
+        border-bottom: 1px solid #EEE;
+        transition: background-color .3s ease-in-out;
+        background-color: #FFF;
+        cursor: pointer;
+
+        &:hover, &:focus {
+            background-color: #EEE;
+        }
+    }
+
+    &-selected {
+        background-color: #EEE;
+    }
+}
